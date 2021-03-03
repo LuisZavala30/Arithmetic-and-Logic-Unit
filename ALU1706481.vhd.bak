@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+--use IEEE.STD_LOGIC_signed.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+
+ENTITY ALU1706481 is
+PORT(
+		rs_1706481, op_1706481 : in std_logic_vector (3 downto 0); -- Operadores
+		Cin_1706481				  : in integer range 0 to 1;			  -- Carry de Entrada
+		Sel_1706481				  : in std_logic_vector (2 downto 0); -- Selectores
+		rd_1706481				  : out std_logic_vector(3 downto 0); -- Resultado
+		statusreg_1706481		  : out std_logic_vector(2 downto 0));-- Flags (Overflow, Carry, Zero)
+
+END ALU1706481;
+
+
+ARCHITECTURE a of ALU1706481 is
+signal auxAritm : signed(4 downto 0);
+signal auxLogic : std_logic_vector(3 downto 0);
+
+Begin	
+-------------- SECCIÓN ARITMETICA ---------------
+	with Sel_1706481(1 downto 0) select
+	auxAritm <= ('0' & signed(rs_1706481)) + signed(op_1706481) 								when "00",
+					('0' & signed(rs_1706481)) + signed(op_1706481) + Cin_1706481 	when "01",
+					('0' & signed(rs_1706481)) - signed(op_1706481)									when "10",
+					('0' & signed(rs_1706481)) - signed(op_1706481) + Cin_1706481	when "11";
+	
+	PROCESS(auxAritm)
+	Begin
+		rd_1706481 				<=std_logic_vector(auxAritm(3 downto 0));
+		statusreg_1706481(1) <= auxAritm(4);
+		statusreg_1706481(2) <= auxAritm(3) XOR auxAritm(4);
+	END PROCESS;
+
+	
+END a;

@@ -1,0 +1,54 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  max10
+Quartus root          :  c:/intelfpga_lite/18.1/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/18.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  ALU1706481.vho
+Sim SDF file          :  ALU1706481__vhdl.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File ALU1706481_run_msim_gate_vhdl.do already exists - backing up current file as ALU1706481_run_msim_gate_vhdl.do.bak4
+Probing transcript
+ModelSim-Altera Info: # Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # ERROR: No extended dataflow license exists
+ModelSim-Altera Info: # do ALU1706481_run_msim_gate_vhdl.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vcom -93 -work work {ALU1706481.vho}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 16:15:47 on Feb 20,2021
+ModelSim-Altera Info: # vcom -reportprogress 300 -93 -work work ALU1706481.vho 
+ModelSim-Altera Info: # -- Loading package STANDARD
+ModelSim-Altera Info: # -- Loading package TEXTIO
+ModelSim-Altera Info: # -- Loading package std_logic_1164
+ModelSim-Altera Info: # -- Loading package VITAL_Timing
+ModelSim-Altera Info: # -- Loading package VITAL_Primitives
+ModelSim-Altera Info: # -- Loading package fiftyfivenm_atom_pack
+ModelSim-Altera Info: # -- Loading package fiftyfivenm_components
+ModelSim-Altera Info: # -- Compiling entity hard_block
+ModelSim-Altera Info: # -- Compiling architecture structure of hard_block
+ModelSim-Altera Info: # -- Compiling entity ALU1706481
+ModelSim-Altera Info: # -- Compiling architecture structure of ALU1706481
+ModelSim-Altera Info: # End time: 16:15:47 on Feb 20,2021, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+Info: NativeLink simulation flow was successful
